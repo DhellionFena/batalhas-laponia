@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "variaveis.h"  //todas as variaveis globais do jogo
+
 
 //sorteia um player
 void sorteio() {

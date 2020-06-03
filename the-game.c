@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <locale.h>
+#include "functions/variaveis.h"
 #include "functions/nomes.h"
 #include "functions/turnos.h"
 #include "functions/menu.h"
-#include <locale.h>
+#include "functions/tabuleiro.h"
 
 
 int main(){
@@ -15,6 +17,7 @@ int main(){
     players();
     sorteio();
     printf("--------------------------------------------------\n");
+    tabuleirobl();
 
     return 0;
 }
