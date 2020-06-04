@@ -2,9 +2,11 @@
 #include <locale.h>
 #include "functions/variaveis.h"
 #include "functions/nomes.h"
-#include "functions/turnos.h"
+#include "functions/sorteio.h"
 #include "functions/menu.h"
 #include "functions/tabuleiro.h"
+#include "functions/colocarPersonagem.h"
+
 
 
 int main(){
@@ -18,6 +20,7 @@ int main(){
     sorteio();
     printf("--------------------------------------------------\n");
     tabuleirobl();
+    //colocarPersonagem();
 
     return 0;
 }

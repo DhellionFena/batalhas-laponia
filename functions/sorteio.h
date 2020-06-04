@@ -24,4 +24,5 @@ void sorteio() {
     }
 
     printf("Ja me decidi!! Quem vai comecar eh: \n-> %s!!!\nBOM JOGO!!! :D\n", player1);
+
 } 
