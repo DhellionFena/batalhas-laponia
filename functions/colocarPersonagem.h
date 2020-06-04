@@ -7,9 +7,9 @@ int colocarPersonagem()
     char tipo;
     cont = 1;
     
-    // m é o valor da matriz do PC
-    // c e l são variaveis da linha e coluna do jogador
-	//tipo é o tipo de guerreiro
+    // m ï¿½ o valor da matriz do PC
+    // c e l sï¿½o variaveis da linha e coluna do jogador
+	//tipo ï¿½ o tipo de guerreiro
 	
     
     for ( i=0; i<=16; i++)
@@ -22,22 +22,29 @@ int colocarPersonagem()
          	while (1)
          	{
 			 
-			    printf(" %s diga sua posição [L] [C]", player1);
+			    printf(" %s diga sua posicao [L] [C]", player1);
 	            scanf(" %d %d", &l1, &c1);
 	            m1= l1 + 2;
 	            m2= c1 + 2;
 	            							
 	                if ((0 <= l1) && (l1 < 4) && (0 <= c1) && (c1 <=9)) 
 	                {
-	                    printf ("Escolha o guerreiro");
-	                    scanf (" %c", &tipo);
-						tabuleiro[m1][m2] = tipo;
-						tabuleirobl();
-						break;
+	                    if (verificaCasa(m1, m2) == 0)
+						{
+							printf ("Escolha o guerreiro\n-> ");
+							scanf (" %c", &tipo);
+							tabuleiro[m1][m2] = tipo;
+							tabuleirobl();
+							break;
+						}
+						else
+						{
+							printf("Ja existe um jogador ai!!!\nPor favor insira outra posicao!\n");
+						}
 	                }
 	            	else
 					{ 
-						printf ("Posição invalida! Digite Novamente \n");
+						printf ("Posicao invalida! Digite Novamente \n");
 						
 					}    
 	        }
@@ -47,21 +54,25 @@ int colocarPersonagem()
             while (1)
             {
 			
-				printf(" %s diga sua posição [L] [C]", player2);
+				printf(" %s diga sua posicao [L] [C]", player2);
 	            scanf(" %d %d", &l2, &c2);
 	            m3= l2 + 2;
 	            m4= c2 + 2;
 	                if ((6<= l2) && (l2 <10 ) && (0 <= c2) && (c2 <=9))
 	                {
-	                    printf ("Escolha o guerreiro");
-	                    scanf (" %c", &tipo);
-						tabuleiro[m3][m4] = tipo;
-						tabuleirobl();
-						break;
+						if (verificaCasa(m3, m4) == 0) {
+							printf ("Escolha o guerreiro\n-> ");
+							scanf (" %c", &tipo);
+							tabuleiro[m3][m4] = tipo;
+							tabuleirobl();
+							break;
+						} else {
+							printf("Ja existe um jogador ai!!!\nPor favor insira outra posicao!\n");
+						}
 	                }
 	                else
 	                {
-	                	printf ("Posição invalida! Digite Novamente \n");
+	                	printf ("Posicao invalida! Digite Novamente \n");
 					}
 	    	}
 	    }

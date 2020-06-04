@@ -6,6 +6,7 @@
 #include "functions/menu.h"
 #include "functions/tabuleiro.h"
 #include "functions/colocarPersonagem.h"
+#include "functions/verificador.h"
 
 
 
@@ -20,7 +21,8 @@ int main(){
     sorteio();
     printf("--------------------------------------------------\n");
     tabuleirobl();
-    //colocarPersonagem();
+    colocarPersonagem();
+    
 
     return 0;
 }

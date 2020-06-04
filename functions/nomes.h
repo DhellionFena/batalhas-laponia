@@ -5,10 +5,10 @@
 void players(){
     while (1) {
         printf("--------------------------------------------------\n");
-        printf("Digite o nome de um dos jogadores\n ->");
+        printf("Digite o nome de um dos jogadores\n -> ");
         scanf(" %[^\n]s", player1);
         printf("--------------------------------------------------\n");
-        printf("Digite o nome do outro jogador\n ->");
+        printf("Digite o nome do outro jogador\n -> ");
         scanf(" %[^\n]s", player2);
 
         if (strcmp(player1, player2) == 0){
