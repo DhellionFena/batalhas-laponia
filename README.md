@@ -3,10 +3,9 @@ Jogo desenvolvido por alunos do Senai Cimatec para composição da Av3 da discip
 
 Alunos:
 <ul>
-<li>Angélia Thaís<li>
-<li>Antônio César<li>
-<li>Daniel Lima<li>
-<li>Fernanda Ferreira<li>
-<li>Katarina Ferrari<li>
-
+<li>Angélia Thaís
+<li>Antônio César
+<li>Daniel Lima
+<li>Fernanda Ferreira
+<li>Katarina Ferrari
 </ul>
