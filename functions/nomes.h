@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// recebe nome dos dois players
+// Recebe nome dos dois players
 void players(){
     while (1) {
         printf("--------------------------------------------------\n");
@@ -12,7 +12,7 @@ void players(){
         scanf(" %[^\n]s", player2);
 
         if (strcmp(player1, player2) == 0){
-            printf("Os nomes são os mesmos! Por favor insira nomes diferentes :) \n");
+            printf("Os nomes sao os mesmos! Por favor insira nomes diferentes :) \n");
         }
         else {
             break;
