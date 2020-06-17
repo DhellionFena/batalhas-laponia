@@ -107,9 +107,9 @@ void movimentarNorte(int x, int y)
 		}
 		else if (batata == 3)
 		{
-			if( verificaCasa(x+1 ,y) ==0 )
+			if( verificaCasa(x-1 ,y) == 0 )
 			{
-				tabuleiro[x+1][y] = tabuleiro [x][y];
+				tabuleiro[x-1][y] = tabuleiro [x][y];
 				tabuleiro[x][y] = ' ';
 				break;
 			}
@@ -120,9 +120,9 @@ void movimentarNorte(int x, int y)
 		}			
 		else if (batata == 4)
 		{
-			if( verificaCasa(x-1 ,y) ==0 )
+			if( verificaCasa(x+1 ,y) ==0 )
 			{
-				tabuleiro[x-1][y] = tabuleiro [x][y];
+				tabuleiro[x+1][y] = tabuleiro [x][y];
 				tabuleiro[x][y] = ' ';
 				break;
 			}

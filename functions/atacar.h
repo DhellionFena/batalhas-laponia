@@ -7,13 +7,13 @@ void atacarDiagonalNorte( int x, int y )
 {
 	int m1, m2, col, dir;
 	
-	printf ("Qual a sua direção de ataque? \n[1] - Esquerda\n[2] - Direita\n-> ");
+	printf ("Qual a sua direcao de ataque? \n[1] - Esquerda\n[2] - Direita\n-> ");
 	scanf (" %i", &dir);
 	
-	m1 = x ; //transformação para nossa matriz
+	m1 = x ; //transformaï¿½ï¿½o para nossa matriz
 	m2 = y ;
 	
-	// codição para a direção
+	// codiï¿½ï¿½o para a direï¿½ï¿½o
 	
 	if (dir == 1)
 	{
@@ -32,9 +32,9 @@ void atacarDiagonalNorte( int x, int y )
 		
 			if (verificaCasa(m1,m2) == 2)	// caso encotre presonagem
 			{
-				if ((6<= m1) && (m1 <10 ) && (0 <= m2) && (m2 <=9)) // para eliminar apenas no espaco do openente
+				if ((8 <= m1) && (m1 < 11 ) && (2 <= m2) && (m2 <= 11)) // para eliminar apenas no espaco do openente
 				{
-					printf ("> Guerreira eliminada! Você ganhou 1 big big :)\n");
+					printf ("> Guerreira eliminada! Voce ganhou 1 big big :)\n");
 					tabuleiro[m1][m2] = ' ';
 					quant_sul--;
 					break;
@@ -54,14 +54,14 @@ void atacarDiagonalSul( int x, int y )
 {
 	int m1, m2, col, dir;
 	
-	printf ("Qual a sua direção de ataque? \n[1] - Esquerda\n[2] - Direita\n-> ");
+	printf ("Qual a sua direcao de ataque? \n[1] - Esquerda\n[2] - Direita\n-> ");
 	scanf (" %i", &dir);
 	
 	
-	m1 = x ; //transformação para nossa matriz
+	m1 = x ; //transformaï¿½ï¿½o para nossa matriz
 	m2 = y ;
 	
-	// codição para a direção
+	// codiï¿½ï¿½o para a direï¿½ï¿½o
 	
 	if (dir == 1)
 	{
@@ -80,9 +80,9 @@ void atacarDiagonalSul( int x, int y )
 		
 			if (verificaCasa(m1,m2) == 2)	// caso encotre presonagem
 			{
-				if ((0 <= m1) && (m1 < 4) && (0 <= m2) && (m2 <=9)) // para eliminar apenas no espaco do openente
+				if ((0 <= m1) && (m1 < 6) && (0 <= m2) && (m2 <=11)) // para eliminar apenas no espaco do openente
 				{
-				printf ("> Guerreira eliminada! Você ganhou 1 big big :)\n");
+				printf ("> Guerreira eliminada! Voce ganhou 1 big big :)\n");
 				tabuleiro[m1][m2] = ' ';
 				quant_norte--;
 				break;
@@ -102,7 +102,7 @@ void atacarVerticalNorte( int x, int y )
 {
 	int m1, m2, col, dir;
 	
-	m1 = x ; //transformação para nossa matriz
+	m1 = x ; //transformaï¿½ï¿½o para nossa matriz
 	m2 = y ;
 	
 		
@@ -112,9 +112,9 @@ void atacarVerticalNorte( int x, int y )
 		
 			if (verificaCasa(m1,m2) == 2)	// caso encotre presonagem
 			{
-				if ((6<= m1) && (m1 <10 ) && (0 <= m2) && (m2 <=9)) //// para eliminar apenas no espaco do openente
+				if ((8 <= m1) && (m1 < 11 ) && (2 <= m2) && (m2 <= 11)) //// para eliminar apenas no espaco do openente
 				{
-				printf ("> Guerreira eliminada! Você ganhou 1 big big :)\n");
+				printf ("> Guerreira eliminada! Voce ganhou 1 big big :)\n");
 				tabuleiro[m1][m2] = ' ';
 				quant_sul--;
 				break;
@@ -134,7 +134,7 @@ void atacarVerticalSul( int x, int y )
 {
 	int m1, m2, col, dir;
 	
-	m1 = x ; //transformação para nossa matriz
+	m1 = x ; //transformacao para nossa matriz
 	m2 = y ;
 	
 		
@@ -144,9 +144,9 @@ void atacarVerticalSul( int x, int y )
 		
 			if (verificaCasa(m1,m2) == 2)	// caso encotre presonagem
 			{
-				if ((0 <= m1) && (m1 < 4) && (0 <= m2) && (m2 <=9)) // para eliminar apenas no espaco do openente
+				if ((0 <= m1) && (m1 < 6) && (0 <= m2) && (m2 <= 11)) // para eliminar apenas no espaco do openente
 				{
-				printf ("> Guerreira eliminada! Você ganhou 1 big big :)\n");
+				printf ("> Guerreira eliminada! Voce ganhou 1 big big :)\n");
 				tabuleiro[m1][m2] = ' ';
 				quant_norte--;
 				break;
@@ -164,7 +164,7 @@ void atacarVerticalSul( int x, int y )
 void guerreiroEspecialSul( int x, int y )
 {
 	int m1, m2, col, dir;
-	m1 = x ; //transformação para nossa matriz
+	m1 = x ; //transformacao para nossa matriz
 	m2 = y ;
 	
 		
@@ -174,9 +174,9 @@ void guerreiroEspecialSul( int x, int y )
 		
 			if (verificaCasa(m1,m2) == 2)	// caso encotre presonagem
 			{
-				if ((0 <= m1) && (m1 < 4) && (0 <= m2) && (m2 <=9)) // para eliminar apenas no espaco do openente
+				if ((0 <= m1) && (m1 < 6) && (0 <= m2) && (m2 <= 11)) // para eliminar apenas no espaco do openente
 				{
-				printf ("Guerreiras eliminadas! Você ganhou 1 big big :)\n");
+				printf ("Guerreira(s) eliminada(s)! Voce ganhou 1 big big :)\n");
 				tabuleiro[m1][m2] = ' ';
 					if (verificaCasa(m1-1,m2-1) == 2)	
 					{
@@ -235,7 +235,7 @@ void guerreiroEspecialSul( int x, int y )
 void guerreiroEspecialNorte( int x, int y )
 {
 	int m1, m2, col, dir;
-	m1 = x ; //transformação para nossa matriz
+	m1 = x ; //transformacao para nossa matriz
 	m2 = y ;
 	
 		
@@ -245,9 +245,9 @@ void guerreiroEspecialNorte( int x, int y )
 		
 			if (verificaCasa(m1,m2) == 2)	// caso encotre presonagem
 			{
-				if ((0 <= m1) && (m1 < 4) && (0 <= m2) && (m2 <=9)) // para eliminar apenas no espaco do openente
+				if ((8 <= m1) && (m1 < 11 ) && (2 <= m2) && (m2 <= 11)) // para eliminar apenas no espaco do openente
 				{
-				printf ("Guerreiras eliminadas! Você ganhou 1 big big :)\n");
+				printf ("Guerreira(s) eliminada(s)! Voce ganhou 1 big big :)\n");
 				tabuleiro[m1][m2] = ' ';
 					if (verificaCasa(m1-1,m2-1) == 2)	
 					{

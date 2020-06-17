@@ -15,6 +15,7 @@
 
 
 int main(){
+    int vencedor;
     //setlocale(LC_ALL, "Portuguese");
     int start_game;
     start_game = menu();
@@ -35,6 +36,8 @@ int main(){
 		tabuleirobl();
 		// printf ("                         Narrador falou algo\n");
 	}//jogo finalizado
+    printf("--------------------FIM DE JOGO--------------------\n");
+    printf("PARABENS %s!!!!!!! VOCE VENCEU", quant_norte > 0 ? player1 : player2);
     system("pause");
     return 0;
 }

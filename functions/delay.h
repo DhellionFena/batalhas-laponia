@@ -1,14 +1,14 @@
 #include <stdio.h> 
 #include <time.h> 
   
-void delay(int number_of_seconds) 
+void delay(int segundos) 
 { 
     // conversao para millisegundos 
-    int milli_seconds = 1000 * number_of_seconds; 
+    int mili_segundos = 1000 * segundos; 
   
     // Storing start time 
     clock_t start_time = clock(); 
   
     // looping till required time is not achieved 
-    while (clock() < start_time + milli_seconds); 
+    while (clock() < start_time + mili_segundos); 
 } 

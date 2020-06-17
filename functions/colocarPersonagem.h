@@ -24,7 +24,7 @@ int colocarPersonagem()
          	while (1)
          	{
 			 	// Player um colocando personagens no tabuleiro
-			    printf("> %s diga sua posicao \n[LINHA] -> ", player1);
+			    printf("> %s diga a posicao que deseja colocar sua guerreira.\n[LINHA] -> ", player1);
 	            scanf("%d", &l1);
 	            printf("[COLUNA] -> ");
 	            scanf("%d", &c1);
@@ -37,7 +37,7 @@ int colocarPersonagem()
 						{
 							while (1)
 							{
-								printf ("Escolha o guerreiro\n-> "); 
+								printf ("Escolha a guerreira\n-> "); 
 								scanf (" %c", &tipo);
 								if (contN == 0 || tipo != '@') //Limitando quantidade de guerreiros especiais
 								{

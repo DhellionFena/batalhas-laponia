@@ -15,20 +15,22 @@ int turnos()
 		printf("> %s sua vez!\n", player1);
 		while(7)
 		{
-			printf("> Onde esta o guerreira que sera usado nessa rodada?\n");
+			printf("> Onde esta a guerreira que sera usada nessa rodada?\n");
 	 		printf("[L] -> ");
             scanf("%d", &l1);
             printf("[C] -> ");
             scanf("%d", &c1);
-            m1= l1 + 2; // Converter para nossa matriz
-	        m2= c1 + 2;
+            m1 = l1 + 2; // Converter para nossa matriz
+	        m2 = c1 + 2;
+			//printf("Posicoes: %i, %i (%i, %i)", m1, m2, l1, c1);
 	        
-	        if ((0 <= m1) && (m1 < 4) && (0 <= m2) && (m2 <=9)) // Limitar a selecao de guerreiros
+	        if ((0 <= m1) && (m1 < 6) && (0 <= m2) && (m2 <= 11)) // Limitar a selecao de guerreiros
 	        {
 		        tipo = verificaCasa(m1, m2);  // Identificador se h� personagem e qual tipo
 		        if (tipo == 2 )
 				{
 					qg = tabuleiro[m1][m2]; // Atribuir valor a qg e identifica-lo
+					printf("> %s escolheu a gerreira: %c\n", player1, qg);
 					break;
 				}
 				else 
@@ -43,7 +45,7 @@ int turnos()
 		      
 		}
 		
-		printf("> Qual a acao desse guerreiro?\n");
+		printf("> Qual a acao dessa guerreira?\n");
 		printf(" [1] - Atacar\n [2] - Mover\n [3] - Escolher outra guerreira\n ");
 		scanf("%d", &acao);
 		
@@ -64,6 +66,7 @@ int turnos()
 		}
 		else if (acao == 2)
 		{
+			printf("> %s usou movimentar!\n", player1);
 			movimentarNorte(m1, m2);
 		}
 		else if (acao == 3)
@@ -82,20 +85,22 @@ int turnos()
 		printf("> %s sua vez!\n", player2);
 		while(7)
 		{
-			printf("> Onde esta o guerreira que sera usado nessa rodada?\n");
+			printf("> Onde esta a guerreira que sera usada nessa rodada?\n");
 	 		printf("[L] -> ");
             scanf("%d", &l1);
             printf("[C] -> ");
             scanf("%d", &c1);
             m1= l1 + 2;
 	        m2= c1 + 2;
+			//printf("Posicoes: %i, %i (%i, %i)\n", m1, m2, l1, c1);
 	        
-	        if ((6<= m1) && (m1 <10 ) && (0 <= m2) && (m2 <=9))
+	        if ((8 <= m1) && (m1 < 11 ) && (2 <= m2) && (m2 <= 11))
 	        {
 		        tipo = verificaCasa(m1, m2);  // Identificador se ha personagem e qual tipo
 		        if (tipo == 2 )
 				{
-					qg = tabuleiro[m1][m2]; 
+					qg = tabuleiro[m1][m2];
+					printf("> %s escolheu a gerreira: %c\n", player2, qg);
 					break;
 				}
 				else 
@@ -132,6 +137,7 @@ int turnos()
 		}
 		else if (acao == 2)
 		{
+			printf("> %s usou movimentar!\n", player1);
 			movimentarSul(m1, m2);
 		}
 		else if (acao == 3)
