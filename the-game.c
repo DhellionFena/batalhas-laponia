@@ -37,7 +37,7 @@ int main(){
 		// printf ("                         Narrador falou algo\n");
 	}//jogo finalizado
     printf("--------------------FIM DE JOGO--------------------\n");
-    printf("PARABENS %s!!!!!!! VOCE VENCEU", quant_norte > 0 ? player1 : player2);
+    printf(">PARABENS %s!!!!!!!\nVOCE VENCEU\n", quant_norte > 0 ? player1 : player2);
     system("pause");
     return 0;
 }

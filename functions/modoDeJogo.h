@@ -10,7 +10,7 @@ void modoDeJogo(){
         scanf("%i", &LapaPerfeito);
 
         if (LapaPerfeito == 1) {
-            modo = 6;
+            modo = 2;
             printf("Pronto! Modo RAPIDO ativado!\n");
             break;
         }
